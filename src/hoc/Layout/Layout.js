@@ -1,15 +1,16 @@
 import React from 'react';
-import './Layout.module.css';
+import classes from './Layout.module.css';
 
 import Navbar from '../../components/Navigation/Navbar/Navbar';
-import TaskList from '../../components/TaskList/TaskList';
+import Dashboard from '../../components/Dashboard/Dashboard';
 
 function Layout() {
     return (
-        <div className="Layout">
+        <div className={classes.Layout}>
             <Navbar/>
-            <main>
-            <TaskList/>
+            <main className={classes.Main}>
+
+                <Dashboard/>
             </main>
         </div>
     );
