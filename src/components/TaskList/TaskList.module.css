@@ -2,14 +2,15 @@
     margin: 1rem;
     background: rgba(255, 255, 255, .8);
     border-radius: 5px;
-    padding: 2rem 4rem;
+    padding: 1rem;
     min-width: 40rem;
 }
 
 .ListName {
-    margin-bottom: 5rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 0 1rem;
 }
 
 .Buttons {
