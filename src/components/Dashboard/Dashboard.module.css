@@ -1,4 +1,61 @@
 .Dashboard {
+    height: 100%;
     display: flex;
     justify-items: flex-start;
+    align-items: flex-start;
+    overflow-x: auto;
+}
+
+.Button {
+    background-color: rgba(255, 255, 255, .8);
+    border: none;
+    border-radius: 5px;
+    font-size: inherit;
+    padding: 2rem 4rem;
+    margin: 1rem;
+    color: black;
+    cursor: pointer;
+}
+
+.Button:focus {
+    outline: none;
+}
+
+.EditForm {
+    display: flex;
+    flex-wrap: wrap;
+}
+.EditForm label {
+    min-width: 100%;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+.EditForm input {
+    flex-grow: 1;
+    border: none;
+    background: #f7f1f1;
+    padding: 0 1.5em;
+    font-size: initial;
+}
+.EditForm button {
+    padding: 0 1.3rem;
+    background: #ff6666;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease-out;
+}
+.EditForm button:hover {
+    background: #ff5e5e;
+}
+.EditForm input,
+.EditForm button {
+    height: 3rem;
+}
+
+.EditForm button:focus {
+    outline: none;
 }

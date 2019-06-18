@@ -21,6 +21,10 @@ class TaskList extends Component {
         this.remove = this.remove.bind(this);
         this.update = this.update.bind(this);
         this.toggleCompletion = this.toggleCompletion.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleRemove = this.handleRemove.bind(this);
+        this.handleUpdate = this.handleUpdate.bind(this);
+        this.toggleForm = this.toggleForm.bind(this);
     }
 
     create(newTask) {
@@ -56,7 +60,7 @@ class TaskList extends Component {
     }
 
     handleRemove() {
-        this.props.removeTask(this.props.id);
+        this.props.removeList(this.props.id);
     }
 
     toggleForm() {
@@ -76,7 +80,7 @@ class TaskList extends Component {
     }
 
     render() {
-
+        console.log("UPDATELIST", this.props.updateList);
         const tasks = this.state.tasks.map(todo => {
             return (
                 <Task
@@ -95,15 +99,15 @@ class TaskList extends Component {
             listName = <form className={classes.EditForm} onSubmit={this.handleUpdate}>
                 <input
                     type='text'
-                    value={this.state.task}
-                    name='task'
+                    value={this.state.name}
+                    name='name'
                     onChange={this.handleChange}
                 />
                 <button>Save</button>
             </form>
         } else {
             listName = <div className={classes.ListName}>
-                <h2>{this.props.name}</h2>
+                <h3>{this.props.name}</h3>
                 <div className={classes.Buttons}>
                     <button onClick={this.toggleForm}>
                         <i className='fas fa-pen'/>
