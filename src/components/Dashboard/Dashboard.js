@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
-import uuid from 'uuid/v4'
+import uuid from 'uuid/v4';
+import firebase from '../../Firebase';
 
 import TaskList from '../TaskList/TaskList';
 import classes from './Dashboard.module.css';
+import axios from '../../axios-boards';
+import Spinner from '../Spinner/Spinner';
 
 
 class Dashboard extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            lists: [
-                {name: 'demo list 1', editing: false, id: uuid()},
-            ],
-            adding: false
+            lists: [],
+            adding: false,
         };
         this.create = this.create.bind(this);
         this.remove = this.remove.bind(this);
@@ -20,15 +21,36 @@ class Dashboard extends Component {
         this.startAdding = this.startAdding.bind(this);
     }
 
+    componentDidMount(){
+        axios.get('/lists.json')
+            .then(res => {
+                console.log('AXIOS', res);
+                let listArr = [];
+                for (let i in res.data) {
+                    listArr.push(res.data[i])
+                }
+                this.setState({lists: listArr});
+            }).catch(err => {
+                console.log(err);
+        })
+    }
+
     startAdding(){
         this.setState({adding: true});
     }
 
     create(newList) {
-        this.setState({
-            lists: [...this.state.lists, newList]
-        });
-        this.setState({adding: false});
+        axios.post('/lists.json', newList)
+            .then(res => {
+                this.setState({
+                    lists: [...this.state.lists, newList]
+                });
+                this.setState({adding: false});
+            })
+            .catch(err => {
+                console.log('ERROR', err);
+                this.setState({adding: false});
+            })
     }
 
     remove(id) {
@@ -45,7 +67,6 @@ class Dashboard extends Component {
                 }
                 return list;
             });
-            this.setState({lists: updatedLists});
         } else {this.create({name:updatedList, id: uuid(), editing: false})}
     }
     render() {
