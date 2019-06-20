@@ -1,11 +1,16 @@
 This project is mini version of Trello in progress.
+## LOGIN
+```
+u: test@test.com
+p: Password_1
+```
 
 ## TODO
-1. add user registration and authentication with Firebase
-2. store user's lists and tasks in Firebase
+1. add user registration with Firebase
+2. store users' lists and tasks in Firebase
 3. add drag'n'drop of tasks and lists
-4. add main dashboard with all user's boards, enable adding boards
-5. enable adding deadlines to tasks, enable colors
+4. add main dashboard with all users' boards, enable adding boards
+5. enable adding deadlines to tasks, enable color codes
 6. enable users to pick a background picture for a given board
 7. enable sharing boards between users
 
