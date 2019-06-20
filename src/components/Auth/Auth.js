@@ -11,7 +11,7 @@ class Auth extends Component {
         super(props);
         this.state = {
             email: '',
-            pass: '',
+            password: '',
             loading: false
         }
         this.handleChange = this.handleChange.bind(this);
