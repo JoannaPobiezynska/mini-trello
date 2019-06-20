@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import classes from './Layout.module.css';
+import { connect } from 'react-redux';
 
+import classes from './Layout.module.css';
 import Navbar from '../../components/Navigation/Navbar/Navbar';
 
 
 class Layout extends Component {
     render() {
         return (
-            <div className={classes.Layout}>
-                <Navbar/>
+            <div className={this.props.isAuthenticated ? classes.LayoutAuth :classes.Layout}>
+                <Navbar isAuthenticated={this.props.isAuthenticated}/>
                 <main className={classes.Main}>
                     {this.props.children}
                 </main>
@@ -17,5 +18,11 @@ class Layout extends Component {
     }
 }
 
-export default Layout;
+const mapStateToProps = state => {
+    return {
+        isAuthenticated: state.auth.token !== null
+    };
+};
+
+export default connect(mapStateToProps)(Layout);
 

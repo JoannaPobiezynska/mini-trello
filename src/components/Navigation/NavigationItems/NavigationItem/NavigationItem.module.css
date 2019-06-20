@@ -5,6 +5,10 @@
     margin: 0 5px;
 }
 
+.NavigationItem:hover {
+    border-bottom: 1px solid white;
+}
+
 .NavigationItem a{
     color: white;
     text-decoration: none;
@@ -12,4 +16,8 @@
     box-sizing: border-box;
     display: block;
 
+}
+
+.active {
+    border-bottom: 1px solid white;
 }
