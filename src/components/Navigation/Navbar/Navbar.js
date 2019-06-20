@@ -6,7 +6,7 @@ import NavigationItems from '../NavigationItems/NavigationItems'
 class Navbar extends Component {
     render() {
         return <header className={classes.Navbar}>
-            <div >Mini Trello</div>
+            <div className={classes.Brand}>Mini Trello</div>
             <NavigationItems/>
         </header>
     }
