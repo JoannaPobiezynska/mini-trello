@@ -95,7 +95,7 @@ class TaskList extends Component {
             );
         });
         let listName;
-        if (this.props.editing) {
+        if (this.props.editing || this.state.editing) {
             listName = <form className={classes.EditForm} onSubmit={this.handleUpdate}>
                 <input
                     type='text'

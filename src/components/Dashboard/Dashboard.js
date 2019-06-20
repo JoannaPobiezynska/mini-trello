@@ -41,7 +41,7 @@ class Dashboard extends Component {
         if (id !== undefined) {
             const updatedLists = this.state.lists.map(list => {
                 if (list.id === id) {
-                    return {...list, list: updatedList};
+                    return {...list, name: updatedList};
                 }
                 return list;
             });

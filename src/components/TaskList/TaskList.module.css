@@ -1,9 +1,9 @@
 .TaskList {
-    margin: 1rem;
-    background: rgba(255, 255, 255, .8);
+    margin: 1rem .5rem;
+    background: rgba(255, 255, 255, .6);
     border-radius: 5px;
     padding: 1rem;
-    min-width: 40rem;
+    min-width: 30rem;
 }
 
 .ListName {
@@ -11,6 +11,12 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 1rem;
+    color: #313131;
+
+}
+
+.ListName h3 {
+    font-weight: 300;
 }
 
 .Buttons {
@@ -26,7 +32,7 @@
     background: none;
     -webkit-appearance: none;
     cursor: pointer;
-    /*color: lightslategray;*/
+    color: #313131;
 }
 
 .Buttons button:focus {
@@ -47,13 +53,19 @@
 .EditForm input {
     flex-grow: 1;
     border: none;
-    background: #f7f1f1;
-    padding: 0 1.5em;
+    background: transparent;
+    padding: 0 1rem;
     font-size: initial;
+    color: #313131;
+    border-bottom: 2px solid #adc3e1;
+}
+
+.EditForm input:focus{
+    outline: none;
 }
 .EditForm button {
     padding: 0 1.3rem;
-    background: #ff6666;
+    background: #adc3e1;
     color: white;
     text-transform: uppercase;
     font-weight: bold;
@@ -63,7 +75,7 @@
     transition: background 0.2s ease-out;
 }
 .EditForm button:hover {
-    background: #ff5e5e;
+    background:#a1b5d1;
 }
 .EditForm input,
 .EditForm button {

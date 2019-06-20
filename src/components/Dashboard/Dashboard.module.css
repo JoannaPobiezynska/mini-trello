@@ -7,14 +7,18 @@
 }
 
 .Button {
-    background-color: rgba(255, 255, 255, .8);
+    background: rgba(0, 0, 0, .2);
     border: none;
     border-radius: 5px;
     font-size: inherit;
-    padding: 2rem 4rem;
+    padding: 1rem 2rem;
     margin: 1rem;
-    color: black;
+    color: white;
     cursor: pointer;
+}
+
+.Button:hover {
+    background: rgba(0, 0, 0, .3);
 }
 
 .Button:focus {
