@@ -80,7 +80,6 @@ class TaskList extends Component {
     }
 
     render() {
-        console.log("UPDATELIST", this.props.updateList);
         const tasks = this.state.tasks.map(todo => {
             return (
                 <Task
