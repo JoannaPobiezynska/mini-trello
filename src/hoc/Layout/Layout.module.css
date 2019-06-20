@@ -6,5 +6,6 @@
 }
 
 .Main {
-    padding: 10rem 5rem;
+    padding: 10rem 5rem 0 5rem;
+    height: 100vh;
 }
