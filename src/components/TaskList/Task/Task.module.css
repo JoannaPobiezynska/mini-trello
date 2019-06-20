@@ -1,0 +1,119 @@
+.Task {
+    border-radius: 0;
+    margin-top: 1rem;
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    position: relative;
+    transition: opacity 500ms ease-in-out;
+}
+.Todo {
+    position: relative;
+    transition: opacity 0.4s linear;
+}
+
+/*.TaskCompleted {*/
+    /*color: #adc3e1;*/
+    /*text-decoration: line-through;*/
+    /*cursor: pointer;*/
+/*}*/
+
+
+.Task:hover {
+    background: rgba(227, 242, 253, 0.5);
+}
+
+.TaskCompleted {
+    transition: opacity 300ms ease-in-out;
+    transition-delay: 200ms;
+    opacity: 0.5;
+}
+
+
+.TaskCompleted .Todo:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -0.5rem;
+    display: block;
+    width: 0%;
+    height: 4px;
+    background: #adc3e1;
+    animation: crossout 0.3s ease-in 0s forwards;
+}
+
+@keyframes crossout {
+    to {
+        width: calc(100% + 1rem);
+    }
+}
+
+
+
+.Buttons {
+    flex-shrink: 0;
+    /*padding-left: 0.7em;*/
+    margin-left: auto;
+}
+
+.Buttons button {
+    border: none;
+    font-size: 1.6rem;
+    margin: 0 .7rem;
+    background: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    /*color: lightslategray;*/
+}
+
+.Buttons button:focus {
+    outline: none;
+}
+
+
+.EditForm {
+    display: flex;
+    flex-wrap: wrap;
+}
+.EditForm label {
+    min-width: 100%;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+.EditForm input {
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    border-bottom: 2px solid #adc3e1;
+}
+
+.EditForm input:focus {
+    outline: none;
+}
+.EditForm button {
+    padding: 0 1.3rem;
+    background: #adc3e1;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease-out;
+}
+
+.EditForm button:focus {
+    outline: none;
+}
+.EditForm button:hover {
+    background: #a1b5d1;
+}
+.EditForm input,
+.EditForm button {
+    height: 3rem;
+}

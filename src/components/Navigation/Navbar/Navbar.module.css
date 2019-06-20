@@ -1,0 +1,24 @@
+.Navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .2);
+    color: lightgray;
+    color: rgba(255, 255, 255 .1);
+    padding: 1rem 2rem;
+}
+
+.Brand {
+
+    transition: all .2s
+}
+
+.Brand:hover {
+    color: white;
+    cursor: pointer;
+}
