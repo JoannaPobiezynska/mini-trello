@@ -84,7 +84,10 @@ class Dashboard extends Component {
         });
         let show;
         if (this.state.adding) {
-            show = <TaskList name="" editing="true" createList={this.create} updateList={this.update}
+            show = <TaskList name=""
+                             editing="true"
+                             createList={this.create}
+                             updateList={this.update}
                              removeList={this.remove}/>
         } else {
             show = <button className={classes.Button} onClick={this.startAdding}>Add new list</button>;
