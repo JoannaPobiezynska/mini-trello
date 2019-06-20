@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import uuid from 'uuid/v4';
-import firebase from '../../Firebase';
 
 import TaskList from '../TaskList/TaskList';
 import classes from './Dashboard.module.css';

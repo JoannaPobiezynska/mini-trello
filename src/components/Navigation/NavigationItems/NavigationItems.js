@@ -5,8 +5,8 @@ import NavigationItem from './NavigationItem/NavigationItem';
 
 const navigationItems = (props) => (
     <ul className={classes.NavigationItems}>
-        <NavigationItem><i className="fas fa-user icon"></i></NavigationItem>
-        <NavigationItem><i className="fas fa-user-circle icon"></i></NavigationItem>
+        {props.isAuth && <NavigationItem link="/dashboard">Dashboard</NavigationItem>}
+        {props.isAuth && <NavigationItem link="/logout">Logout</NavigationItem>}
     </ul>
 );
 
