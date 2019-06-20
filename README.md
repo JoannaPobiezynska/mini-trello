@@ -6,7 +6,8 @@ This project is mini version of Trello in progress.
 3. add drag'n'drop of tasks and lists
 4. add main dashboard with all user's boards, enable adding boards
 5. enable adding deadlines to tasks, enable colors
-6. enable sharing boards between users
+6. enable users to pick a background picture for a given board
+7. enable sharing boards between users
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
