@@ -1,3 +1,14 @@
+This project is mini version of Trello in progress.
+
+## TODO
+1. add user registration and authentication with Firebase
+2. store user's lists and tasks in Firebase
+3. add drag'n'drop of tasks and lists
+4. add main dashboard with all user's boards, enable adding boards
+5. enable adding deadlines to tasks, enable colors
+6. enable sharing boards between users
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
