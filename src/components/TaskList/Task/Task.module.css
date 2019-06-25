@@ -15,41 +15,41 @@
     transition: opacity 0.4s linear;
 }
 
-/*.TaskCompleted {*/
-    /*color: #adc3e1;*/
-    /*text-decoration: line-through;*/
-    /*cursor: pointer;*/
-/*}*/
+.TaskCompleted {
+    color: #adc3e1;
+    text-decoration: line-through;
+    cursor: pointer;
+}
 
 
 .Task:hover {
     background: rgba(227, 242, 253, 0.5);
 }
 
-.TaskCompleted {
-    transition: opacity 300ms ease-in-out;
-    transition-delay: 200ms;
-    opacity: 0.5;
-}
+/*.TaskCompleted {*/
+    /*transition: opacity 300ms ease-in-out;*/
+    /*transition-delay: 200ms;*/
+    /*opacity: 0.5;*/
+/*}*/
 
 
-.TaskCompleted .Todo:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -0.5rem;
-    display: block;
-    width: 0%;
-    height: 4px;
-    background: #adc3e1;
-    animation: crossout 0.3s ease-in 0s forwards;
-}
+/*.TaskCompleted .Todo:before {*/
+    /*content: "";*/
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: -0.5rem;*/
+    /*display: block;*/
+    /*width: 0%;*/
+    /*height: 4px;*/
+    /*background: #adc3e1;*/
+    /*animation: crossout 0.3s ease-in 0s forwards;*/
+/*}*/
 
-@keyframes crossout {
-    to {
-        width: calc(100% + 1rem);
-    }
-}
+/*@keyframes crossout {*/
+    /*to {*/
+        /*width: calc(100% + 1rem);*/
+    /*}*/
+/*}*/
 
 
 

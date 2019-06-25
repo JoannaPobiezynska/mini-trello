@@ -54,13 +54,13 @@ class Task extends Component {
                 <button>Save</button>
             </form>
         } else {
-            show = <div className={classes.Todo} onClick={this.handleToggle}>
+            show = <div className={this.props.completed ? classes.TaskCompleted : classes.Todo} onClick={this.handleToggle}>
                         {this.props.task}
                     </div>
 
         }
         return (
-            <div className={this.props.completed ? classes.TaskCompleted : classes.Task}>
+            <div className={classes.Task}>
                 {show}
                 <div className={classes.Buttons}>
                     <button onClick={this.toggleForm}>
