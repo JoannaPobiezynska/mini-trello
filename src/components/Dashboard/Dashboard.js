@@ -66,6 +66,7 @@ class Dashboard extends Component {
                 }
                 return list;
             });
+            this.setState({lists: updatedLists});
         } else {this.create({name:updatedList, id: uuid(), editing: false})}
     }
     render() {
